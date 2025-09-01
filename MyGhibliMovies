@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Studio Ghibli Movies</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      position: relative;
+    }
+    
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.15);
+      z-index: -1;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      margin-bottom: 30px;
+    }
+    
+    .movie-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 15px;
+      margin: 20px 0;
+      background-color: rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(5px);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    
+    .movie-table th {
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 15px;
+      text-align: left;
+    }
+    
+    .movie-table td {
+      padding: 15px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+    
+    .movie-table tr:hover td {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    .movie-poster {
+      width: 120px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    .movie-poster:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    
+    .movie-title {
+      font-weight: 600;
+      font-size: 1.1em;
+      margin-bottom: 5px;
+    }
+    
+    .movie-year {
+      font-size: 0.85em;
+      opacity: 0.8;
+      display: block;
+      margin-bottom: 8px;
+    }
+    
+    .movie-director {
+      font-size: 0.9em;
+      font-style: italic;
+      opacity: 0.9;
+      display: block;
+    }
+    
+    .movie-link {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      font-size: 0.9em;
+      text-align: center;
+    }
+    
+    .movie-link:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9em;
+    }
+    
+    @media (max-width: 768px) {
+      .movie-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      .movie-poster {
+        width: 80px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body style="background: url('https://i.pinimg.com/736x/37/54/d1/3754d1c6a5f462d946137ec83d40798c.jpg') no-repeat center center fixed; background-size: cover; margin: 0; min-height: 100vh; background-attachment: fixed;">
+
+  <div class="container">
+    <h1>Studio Ghibli Movies</h1>
+
+    <table class="movie-table">
+      <thead>
+        <tr>
+          <th>Poster</th>
+          <th>Movie Details</th>
+          <th>More Info</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- My Neighbor Totoro -->
+        <tr>
+          <td>
+            <a href="https://en.wikipedia.org/wiki/My_Neighbor_Totoro" target="_blank">
+              <img src="https://i.pinimg.com/736x/cf/25/bf/cf25bff844f308c0dbf5bc272ab1115f.jpg" 
+                   alt="My Neighbor Totoro" class="movie-poster">
+            </a>
+          </td>
+          <td>
+            <span class="movie-title">My Neighbor Totoro (となりのトトロ)</span>
+            <span class="movie-year">1988 • 86 min</span>
+            <span class="movie-director">Directed by Hayao Miyazaki</span>
+            <p style="margin: 10px 0 0; font-size: 0.9em; opacity: 0.9;">Two young girls move to the countryside and discover the magical creatures living in the nearby forest.</p>
+          </td>
+          <td style="text-align: center;">
+            <a href="https://en.wikipedia.org/wiki/My_Neighbor_Totoro" target="_blank" class="movie-link">
+              Learn More
+            </a>
+          </td>
+        </tr>
+
+        <!-- Spirited Away -->
+        <tr>
+          <td>
+            <a href="https://en.wikipedia.org/wiki/Spirited_Away" target="_blank">
+              <img src="https://i.pinimg.com/1200x/10/83/78/108378d84f48aab18e1cd0defd31db28.jpg" 
+                   alt="Spirited Away" class="movie-poster">
+            </a>
+          </td>
+          <td>
+            <span class="movie-title">Spirited Away (千と千尋の神隠し)</span>
+            <span class="movie-year">2001 • 125 min</span>
+            <span class="movie-director">Directed by Hayao Miyazaki</span>
+            <p style="margin: 10px 0 0; font-size: 0.9em; opacity: 0.9;">A young girl wanders into a world of spirits and must work to free her parents from a spell.</p>
+          </td>
+          <td style="text-align: center;">
+            <a href="https://en.wikipedia.org/wiki/Spirited_Away" target="_blank" class="movie-link">
+              Learn More
+            </a>
+          </td>
+        </tr>
+
+        <!-- Howl's Moving Castle -->
+        <tr>
+          <td>
+            <a href="https://en.wikipedia.org/wiki/Howl%27s_Moving_Castle_(film)" target="_blank">
+              <img src="https://i.pinimg.com/736x/d1/17/0a/d1170aba5f3d74dd261652df22fcbcf4.jpg" 
+                   alt="Howl's Moving Castle" class="movie-poster">
+            </a>
+          </td>
+          <td>
+            <span class="movie-title">Howl's Moving Castle (ハウルの動く城)</span>
+            <span class="movie-year">2004 • 119 min</span>
+            <span class="movie-director">Directed by Hayao Miyazaki</span>
+            <p style="margin: 10px 0 0; font-size: 0.9em; opacity: 0.9;">A young woman is cursed with an old body and seeks the help of a wizard and his walking castle.</p>
+          </td>
+          <td style="text-align: center;">
+            <a href="https://en.wikipedia.org/wiki/Howl%27s_Moving_Castle_(film)" target="_blank" class="movie-link">
+              Learn More
+            </a>
+          </td>
+        </tr>
+
+        <!-- Kiki's Delivery Service -->
+        <tr>
+          <td>
+            <a href="https://en.wikipedia.org/wiki/Kiki%27s_Delivery_Service" target="_blank">
+              <img src="https://i.pinimg.com/736x/b4/8f/0e/b48f0e4c30dc0a3f80ce0f79dd16cd97.jpg" 
+                   alt="Kiki's Delivery Service" class="movie-poster">
+            </a>
+          </td>
+          <td>
+            <span class="movie-title">Kiki's Delivery Service (魔女の宅急便)</span>
+            <span class="movie-year">1989 • 103 min</span>
+            <span class="movie-director">Directed by Hayao Miyazaki</span>
+            <p style="margin: 10px 0 0; font-size: 0.9em; opacity: 0.9;">A young witch moves to a new town and starts a delivery service using her flying broomstick.</p>
+          </td>
+          <td style="text-align: center;">
+            <a href="https://en.wikipedia.org/wiki/Kiki%27s_Delivery_Service" target="_blank" class="movie-link">
+              Learn More
+            </a>
+          </td>
+        </tr>
+
+        <!-- The Wind Rises -->
+        <tr>
+          <td>
+            <a href="https://en.wikipedia.org/wiki/The_Wind_Rises" target="_blank">
+              <img src="https://i.pinimg.com/736x/5d/4e/1d/5d4e1df6ec6b1d24214c4cf6758ef2c1.jpg" 
+                   alt="The Wind Rises" class="movie-poster">
+            </a>
+          </td>
+          <td>
+            <span class="movie-title">The Wind Rises (風立ちぬ)</span>
+            <span class="movie-year">2013 • 126 min</span>
+            <span class="movie-director">Directed by Hayao Miyazaki</span>
+            <p style="margin: 10px 0 0; font-size: 0.9em; opacity: 0.9;">A fictionalized biography of Jiro Horikoshi, the designer of the Mitsubishi A6M Zero fighter plane.</p>
+          </td>
+          <td style="text-align: center;">
+            <a href="https://en.wikipedia.org/wiki/The_Wind_Rises" target="_blank" class="movie-link">
+              Learn More
+            </a>
+          </td>
+        </tr>
+
+        <!-- Princess Mononoke -->
+        <tr>
+          <td>
+            <a href="https://en.wikipedia.org/wiki/Princess_Mononoke" target="_blank">
+              <img src="https://i.pinimg.com/1200x/9c/da/9d/9cda9df6eb7ebdcfd141d048fee69cfb.jpg" 
+                   alt="Princess Mononoke" class="movie-poster">
+            </a>
+          </td>
+          <td>
+            <span class="movie-title">Princess Mononoke (もののけ姫)</span>
+            <span class="movie-year">1997 • 134 min</span>
+            <span class="movie-director">Directed by Hayao Miyazaki</span>
+            <p style="margin: 10px 0 0; font-size: 0.9em; opacity: 0.9;">A young prince becomes involved in the struggle between the forest gods and a mining colony.</p>
+          </td>
+          <td style="text-align: center;">
+            <a href="https://en.wikipedia.org/wiki/Princess_Mononoke" target="_blank" class="movie-link">
+              Learn More
+            </a>
+          </td>
+        </tr>
+
+        <!-- Ponyo -->
+        <tr>
+          <td>
+            <a href="https://en.wikipedia.org/wiki/Ponyo" target="_blank">
+              <img src="https://i.pinimg.com/736x/2f/e1/ba/2fe1ba3e2757fe7af450ca34b08dd867.jpg" 
+                   alt="Ponyo" class="movie-poster">
+            </a>
+          </td>
+          <td>
+            <span class="movie-title">Ponyo (崖の上のポニョ)</span>
+            <span class="movie-year">2008 • 101 min</span>
+            <span class="movie-director">Directed by Hayao Miyazaki</span>
+            <p style="margin: 10px 0 0; font-size: 0.9em; opacity: 0.9;">A goldfish princess who becomes human and yearns to be with a boy who lives on the surface.</p>
+          </td>
+          <td style="text-align: center;">
+            <a href="https://en.wikipedia.org/wiki/Ponyo" target="_blank" class="movie-link">
+              Learn More
+            </a>
+          </td>
+        </tr>
+
+        <!-- The Tale of the Princess Kaguya -->
+        <tr>
+          <td>
+            <a href="https://en.wikipedia.org/wiki/The_Tale_of_the_Princess_Kaguya" target="_blank">
+              <img src="https://i.pinimg.com/736x/8a/01/9f/8a019fcfb4f00d8272b94427db1d0116.jpg" 
+                   alt="The Tale of the Princess Kaguya" class="movie-poster">
+            </a>
+          </td>
+          <td>
+            <span class="movie-title">The Tale of the Princess Kaguya (かぐや姫の物語)</span>
+            <span class="movie-year">2013 • 137 min</span>
+            <span class="movie-director">Directed by Isao Takahata</span>
+            <p style="margin: 10px 0 0; font-size: 0.9em; opacity: 0.9;">A magical girl from the moon becomes a beautiful young woman desired by five noble suitors.</p>
+          </td>
+          <td style="text-align: center;">
+            <a href="https://en.wikipedia.org/wiki/The_Tale_of_the_Princess_Kaguya" target="_blank" class="movie-link">
+              Learn More
+            </a>
+          </td>
+        </tr>
+
+        <!-- When Marnie Was There -->
+        <tr>
+          <td>
+            <a href="https://en.wikipedia.org/wiki/When_Marnie_Was_There_(film)" target="_blank">
+              <img src="https://i.pinimg.com/736x/52/33/9a/52339a82aec46ce44aa5a9b66782bbfa.jpg" 
+                   alt="When Marnie Was There" class="movie-poster">
+            </a>
+          </td>
+          <td>
+            <span class="movie-title">When Marnie Was There (思い出のマーニー)</span>
+            <span class="movie-year">2014 • 103 min</span>
+            <span class="movie-director">Directed by Hiromasa Yonebayashi</span>
+            <p style="margin: 10px 0 0; font-size: 0.9em; opacity: 0.9;">A young girl is sent to the countryside where she befriends a mysterious girl named Marnie.</p>
+          </td>
+          <td style="text-align: center;">
+            <a href="https://en.wikipedia.org/wiki/When_Marnie_Was_There_(film)" target="_blank" class="movie-link">
+              Learn More
+            </a>
+          </td>
+        </tr>
+
+        <!-- Porco Rosso -->
+        <tr>
+          <td>
+            <a href="https://en.wikipedia.org/wiki/Porco_Rosso" target="_blank">
+              <img src="https://i.pinimg.com/736x/f2/90/12/f2901228816c7828319df287655eef78.jpg" 
+                   alt="Porco Rosso" class="movie-poster">
+            </a>
+          </td>
+          <td>
+            <span class="movie-title">Porco Rosso (紅の豚)</span>
+            <span class="movie-year">1992 • 94 min</span>
+            <span class="movie-director">Directed by Hayao Miyazaki</span>
+            <p style="margin: 10px 0 0; font-size: 0.9em; opacity: 0.9;">A World War I flying ace cursed with an animal's face fights sky pirates in the Adriatic Sea.</p>
+          </td>
+          <td style="text-align: center;">
+            <a href="https://en.wikipedia.org/wiki/Porco_Rosso" target="_blank" class="movie-link">
+              Learn More
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="footer">
+      © 2025 Studio Ghibli Movies – For Educational Purposes Only 🌸
+    </div>
+  </div>
+</body>
+</html>
